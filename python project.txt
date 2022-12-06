@@ -1,0 +1,29 @@
+#use in random libray
+import random
+firstNumber=int(input("Enter a number1: "))
+secondNumber=int(input("Enter a number2: "))
+if firstNumber<secondNumber:
+    #control flows
+    thirdNumber=random.randint(firstNumber,secondNumber)
+    if thirdNumber>0:
+        print(thirdNumber,"is a positive number")
+    elif thirdNumber==0:
+        print(thirdNumber,"is a zero")
+    else:
+        print(thirdNumber,"is a negative number")
+    if thirdNumber%2==0:
+        print(thirdNumber,"is a even number")
+    else:
+        print(thirdNumber,"is a odd number")
+    if thirdNumber<0:
+        print("The prime numbers only starts with >1")
+    if thirdNumber>1:
+        for i in range(2,int(thirdNumber//2)+1):
+            if (thirdNumber%i)==0:
+                print(thirdNumber,"is composite number")
+                break
+        else:
+            print(thirdNumber,"is a prime number")
+else:
+    #     break
+    print("Range always starts with smaller number")
